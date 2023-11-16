@@ -19,4 +19,16 @@ function solveEquation(a, b, c) {
 }
     //let result = solveEquation(1, -4, 3);
     //console.log(result);
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+    let monthlyRate = percent / 100;
+    let loanBody = amount - contribution;
+    let currentRate = monthlyRate / 12;
+    let monthlyPayment = loanBody * (currentRate + (currentRate / ((Math.pow((1 + currentRate), countMonths)) - 1)));
+    let totalAmount = monthlyPayment * countMonths;
+    totalAmount = totalAmount.toFixed(2);
+    let currentTotalAmount = parseFloat(totalAmount);
+    return currentTotalAmount;
+}
+let calc = calculateTotalMortgage(10,0,50000,12);
+console.log(calc);
 
