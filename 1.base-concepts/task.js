@@ -29,6 +29,6 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     let currentTotalAmount = parseFloat(totalAmount);
     return currentTotalAmount;
 }
-let calc = calculateTotalMortgage(10,0,50000,12);
-console.log(calc);
+//let calc = calculateTotalMortgage(10,0,50000,12);
+//console.log(calc);
 
